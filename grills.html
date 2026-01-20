@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Iron Works | Grills</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: linear-gradient(135deg,#111,#333); color: white; padding: 30px 15px; }
+    header .top { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 20px; }
+    header img { width: 90px; }
+
+    nav { background: #222; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    nav a.active { color: #25D366; }
+
+    .hero { background: url('gate1.jpg') center/cover no-repeat; padding: 60px 20px; color: white; }
+    .hero h1 { max-width: 1100px; margin: auto; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 10px; }
+
+    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .breadcrumb { font-size: 14px; margin-bottom: 20px; }
+    .breadcrumb a { text-decoration: none; color: #111; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 15px; }
+    .gallery img { width: 100%; border-radius: 10px; cursor: pointer; transition: transform .3s; }
+    .gallery img:hover { transform: scale(1.05); }
+
+    footer { background: #111; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+    /* MODAL */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); }
+    .modal img { display: block; max-width: 90%; max-height: 90%; margin: 5% auto; }
+
+    /* WHATSAPP */
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px; border-radius: 50%; text-decoration: none; font-size: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <img src="spw.png" alt="Modern Iron Works">
+    <div>
+      <h2>Modern Iron Works</h2>
+      <p>Gates</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="gates.html">Gates</a>
+  <a href="grills.html" class="active">Grills</a>
+  <a href="railings.html">Railings</a>
+  <a href="roofing.html">Roofing</a>
+  <a href="other.html">Other</a>
+</nav>
+
+<div class="hero">
+  <h1>Iron Grills</h1>
+</div>
+
+<section>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> › Grills
+  </div>
+
+  <p>
+    Strong, secure, and stylish iron grills custom-made for homes and businesses.
+    All designs can be customized based on your requirement.
+  </p>
+
+  <div class="gallery">
+    <img src="images/grill/grill(1).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(2).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(3).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(4).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(5).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(6).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(7).jpg" onclick="openModal(this.src)">
+    <img src="images/grill/grill(8).jpg" onclick="openModal(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ModernIronWorks</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/94777457634" target="_blank">💬</a>
+
+<div class="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImg').src = src;
+  document.querySelector('.modal').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

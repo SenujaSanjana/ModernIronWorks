@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Iron Works | Roofing</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+
+    header { background: linear-gradient(135deg,#111,#333); color: white; padding: 30px 15px; }
+    header .top { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 20px; }
+    header img { width: 90px; }
+
+    nav { background: #222; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    nav a.active { color: #25D366; }
+
+    .hero { background: url('roof1.jpg') center/cover no-repeat; padding: 60px 20px; color: white; }
+    .hero h1 { max-width: 1100px; margin: auto; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 10px; }
+
+    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+
+    .breadcrumb { font-size: 14px; margin-bottom: 20px; }
+    .breadcrumb a { text-decoration: none; color: #111; }
+
+    /* ROOF TYPE BUTTONS */
+    .roof-buttons { text-align: center; margin-bottom: 30px; }
+    .roof-buttons button { padding: 12px 18px; margin: 5px; border: none; cursor: pointer; background: #111; color: white; border-radius: 5px; }
+    .roof-buttons button:hover { background: #444; }
+
+    .roof-section { display: none; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 15px; }
+    .gallery img { width: 100%; border-radius: 10px; cursor: pointer; transition: transform .3s; }
+    .gallery img:hover { transform: scale(1.05); }
+
+    footer { background: #111; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+    /* MODAL */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); }
+    .modal img { display: block; max-width: 90%; max-height: 90%; margin: 5% auto; }
+
+    /* WHATSAPP */
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px; border-radius: 50%; text-decoration: none; font-size: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <img src="spw.png" alt="IronCraft">
+    <div>
+      <h2>Modern Iron Works</h2>
+      <p>Roofing</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="gates.html">Gates</a>
+  <a href="grills.html">Grills</a>
+  <a href="railings.html">Railings</a>
+  <a href="roofing.html" class="active">Roofing</a>
+  <a href="other.html">Other</a>
+</nav>
+
+<div class="hero">
+  <h1>Roofing Works</h1>
+</div>
+
+<section>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> › Roofing
+  </div>
+
+  <p>
+    We provide strong and durable roofing solutions for houses, shops, and factories.
+    Choose the roofing type below to see our completed works.
+  </p>
+
+  <!-- ROOF TYPE SELECTOR -->
+  <div class="roof-buttons">
+    <button onclick="showRoof('amano')">Amano Roofing</button>
+    <button onclick="showRoof('poly')">Polycarbonate Roofing</button>
+  </div>
+
+  <!-- AMANO ROOFING -->
+  <div id="amano" class="roof-section">
+    <h2>Amano Roofing</h2>
+    <p>Strong metal roofing suitable for long-term outdoor use.</p>
+    <div class="gallery">
+      <img src="images/roof/amano/amano(1).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(2).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(3).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(4).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(5).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(6).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(7).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(8).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(9).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(10).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(11).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(12).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(13).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(14).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(15).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(16).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/amano/amano(17).jpg" onclick="openModal(this.src)">
+    </div>
+  </div>
+
+  <!-- POLYCARBONATE ROOFING -->
+  <div id="poly" class="roof-section">
+    <h2>Polycarbonate Roofing</h2>
+    <p>Modern transparent roofing for light and stylish designs.</p>
+    <div class="gallery">
+      <img src="images/roof/poly/poly(1).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(2).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(3).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(4).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(5).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(6).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(7).jpg" onclick="openModal(this.src)">
+      <img src="images/roof/poly/poly(8).jpg" onclick="openModal(this.src)">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ModernIronWorks</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/94777457634" target="_blank">💬</a>
+
+<div class="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImg').src = src;
+  document.querySelector('.modal').style.display = 'block';
+}
+
+function showRoof(type){
+  document.getElementById('amano').style.display = 'none';
+  document.getElementById('poly').style.display = 'none';
+  document.getElementById(type).style.display = 'block';
+}
+
+// DEFAULT VIEW
+showRoof('amano');
+</script>
+
+</body>
+</html>
